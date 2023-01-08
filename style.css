@@ -1,11 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body {
-    font-family: cursive;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #43291f;
+
 }
+
 a {
     text-decoration: none;
 }
@@ -18,16 +21,24 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: teal;
-    color: #fff;
+    background-color: rgb(0,0,0,0);
+    color: #f4f0bb;
+    height: 1.5em;
 }
 
-.nav0links a {
-    color: #fff
+.nav-links a {
+    color: #f4f0bb;
+    text-transform: uppercase;
 }
 
-.logo {
-    font-size: 32px;
+.navbar .logo {
+    height: 3em;
+    padding-top: 0;
+}
+
+.logo img{
+    height: 100%;
+    width: auto;
 }
 
 .menu {
@@ -37,43 +48,18 @@ li {
 }
 
 .menu li:hover{
-    background-color: #4c9e9e;
+    background-color: #87c38f;
     border-radius: 5px;
     transition: 0.3s ease;
 }
 
+.menu li a:hover{
+    color: #43291f;
+    font-weight: bold;
+    
+}
 .menu li {
     padding: 5px 14px;
-}
-
-.services {
-    position: relative;
-}
-
-.dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
-    position: absolute;
-    display: none;
-    border-radius: 8px;
-    top: 35px;
-}
-
-.dropdown li + li{
-    margin-top: 10px;
-}
-
-.dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-}
-.dropdown li:hover{
-    background-color: #4c9e9e;
-}
-
-.services:hover .dropdown{
-    display: block;
 }
 
 input[type=checkbox]{
@@ -90,7 +76,7 @@ input[type=checkbox]{
     .menu {
         display: none;
         position: absolute;
-        background-color: teal;
+        background-color: #43291f;
         right: 0;
         left: 0;
         text-align: center;
@@ -98,8 +84,12 @@ input[type=checkbox]{
     }
     .menu li:hover {
         display: inline-block;
-        background-color: #4c9e9e;
+        background-color: #87c38f;
         transition: 0.3s ease;
+    }
+    .menu li a:hover{
+        color: #43291f;
+        font-weight: bold;
     }
     .menu li + li {
         margin-top: 12px;
@@ -109,13 +99,5 @@ input[type=checkbox]{
     }
     .hamburger {
         display: block;
-    }
-    .dropdown {
-        left: 50%;
-        top: 30px;
-        transform: translateX(35%);
-    }
-    .dropdown li:hover {
-        background-color: #4c9e9e;
     }
 }
