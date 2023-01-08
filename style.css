@@ -82,6 +82,46 @@ input[type=checkbox]{
     user-select: none;
 }
 
+#intro h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #DA2C38;
+    text-transform: uppercase;
+    font-size: 5em;
+
+}
+
+#intro h3 {
+    color:#87c38f;
+    font-size: 2.5em;
+}
+
+#intro h3 em{
+    color: #DA2C38;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#intro {
+    margin-left: 25px;
+    padding-top: 15px;
+}
+
+.about {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.about p{
+    font-size: 1.3em;
+    color: #f4f0bb;
+}
+
+.about a{
+    text-decoration: none;
+    color: #f4f0bb;
+}
+
 @media (max-width: 768px) {
     .menu {
         display: none;
