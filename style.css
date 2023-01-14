@@ -1,109 +1,292 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-color: #FFFFFF;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #FFFFFF;
-    height: 1.5em;
-}
-
-.nav-links a {
-    color: #222222;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.navbar .logo {
-    height: 3em;
-    padding-top: 0;
-}
-
-.name {
-    padding-left: 0.5em;
-}
-
-.name h1 {
-    text-transform: uppercase;
-    font-size: 1.5em;
-}
-
-.logo img{
-    height: 100%;
-    width: auto;
-}
-
-.menu {
-    display: flex;
-    gap: item;
-    font-size: 18px
-}
-
-.menu li:hover{
-    background-color: #BBCDE5;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-.menu li a:hover{
-    color: #1c5d99;
-    font-weight: bold;
-    
-}
-.menu li {
-    padding: 5px 14px;
     list-style: none;
+    text-decoration:none;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
-input[type=checkbox]{
+:root {
+    --main-color: #FEFEE3;
+    --second-color: #2C6E49;
+    --third-color: #4c956c;
+}
+  
+  .hamburger-icon {
     display: none;
+  }
+  
+  header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+  }
+  .logo-text{
+    color:white;
+  }
+  
+  .hamburger-icon{
+    border:none;
+    background-color:transparent;
+  }
+  
+  .hamburger-icon .fa-bars,
+  .hamburger-icon .fa-x{
+    color:var(--second-color);
+    font-size:1rem;
+    cursor:pointer;
+  }
+  
+  .hamburger-icon input[type="checkbox"] {
+    appearance: none;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 1rem;
+  }
+  .navigation a{
+    color:var(--second-color)
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    header {
+      display: block;
+    }
+    .navigation {
+      height:0;
+      overflow:hidden;
+      flex-direction: column;
+      align-items: center;
+      transition:all 0.5s ease-in-out;
+    }
+    .logo {
+      display: flex;
+      justify-content: space-between;
+    }
+    .hamburger-icon {
+      display: block;
+    }
+    .fa-x{
+      display:none;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+      margin-top: 1rem;
+      height:100px;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+      display:none;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+      display:inline-block;
+    }
+  }
+  
+  
+  /* Main Info */
+  .container{
+    height:100vh;
+    display:grid;
+    place-items:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+  }
+  .container:nth-child(1){
+    margin-top:0;
+  }
+
+  .container button{
+    color:var(--main-color);
+  }
+  
+/* Home Section */
+
+ #home{
+    background-color:var(--main-color);
+    width: 100%;
+ }
+
+ #home h2{
+    margin: clamp(20px, 10vw, 50px);
+    font-size: clamp(16px, 6vw, 32px);
+ }
+
+#home h1{
+    margin: clamp(20px, 10vw, 50px);
+    font-size: clamp(20px, 8vw, 64px);
 }
 
-.hamburger {
-    display: none;
-    font-size: 24px;
-    user-select: none;
+#home p{
+    margin: clamp(20px, 10vw, 50px);
+    font-size: clamp(14px, 4vw, 24px);
+}
+ /* Skills Section */
+ #skills{
+    background-color:var(--main-color);
+    height: 100%;
+ }
+
+ .cardholder {
+    width: 90%;
+    display:grid;
+    place-items:center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1em;
+    place-items: center;
+    margin: clamp(20px, 10vw, 50px);
+ }
+
+ .title {
+    height:fit-content;
+    padding: 1.5em;
+    font-size: clamp(16px, 6vw, 32px);
+ }
+
+.card{
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-size: 200%;
+    border-radius: 50px;
+    transform: scale(1.05);
+    margin: 2rem;
+    vertical-align: middle;
+    padding: 30px;
 }
 
-/* This is Making Screen Accessible */
-
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        position: absolute;
-        background-color: #226F54;
-        top: 3em;
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-    }
-    .menu li:hover {
-        display: inline-block;
-        background-color: #87c38f;
-        transition: 0.3s ease;
-    }
-    .menu li a:hover{
-        color: #43291f;
-        font-weight: bold;
-    }
-    .menu li + li {
-        margin-top: 12px;
-    }
-    input[type=checkbox]:checked ~ .menu {
-        display: block;
-    }
-    .hamburger {
-        display: block;
-    }
+.container .cardholder .card i{
+    color: var(--second-color);
+    font-size: 6em;
 }
 
-/* This is main page css */
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-position: left;
+    background-color: var(--third-color);
+}
+
+.card p{
+    margin: 1em;
+    font-size: clamp(14px, 6vw, 24px);
+}
+
+/* Projects */
+
+#projects{
+    background-color:var(--main-color);
+    height: 100%;
+ }
+
+ #projectcards a{
+    text-decoration: none;
+    color: black;
+ }
+
+#projectcards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.projectcard {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-size: 200%;
+    border-radius: 50px;
+    transform: scale(1.05);
+    margin: 2rem;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+.projectcard i{
+    color: var(--second-color);
+    font-size: 6em;
+    margin: 0.25em;
+}
+
+
+.projectcard:hover{
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-position: left;
+    background-color: var(--third-color);
+}
+
+.projectcard h3{
+    margin: 1em;
+    font-size: clamp(10px, 5vw, 20px);
+}
+
+/* Contact */
+
+#contact{
+    background-color:var(--main-color);
+    height: 100%;
+ }
+
+#contactcards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.contactcard{
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-size: 200%;
+    border-radius: 50px;
+    transform: scale(1.05);
+    margin: 2rem;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+.container .cardholder .card i{
+    color: var(--second-color);
+    font-size: 6em;
+}
+
+
+.contactcard:hover{
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-position: left;
+    background-color: var(--third-color);
+}
+
+.contactcard p{
+    margin: 1em;
+    font-size: clamp(10px, 6vw, 14px);
+}
+
+.contactcard i{
+    color: var(--second-color);
+    font-size: 4em;
+    margin: 0.25em;
+}
+
+#contactcards a{
+    text-decoration: none;
+    color: black;
+}
