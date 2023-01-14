@@ -17,6 +17,10 @@
   .hamburger-icon {
     display: none;
   }
+
+.logo img {
+    height: 50px;
+  }
   
   header {
     position:fixed;
@@ -85,6 +89,11 @@
     color:var(--main-color);
   }
   
+  .border {
+    background-color: var(--second-color);
+    width: 75%;
+    height: 5px;
+  }
 /* Home Section */
 
  #home{
@@ -290,10 +299,8 @@
       margin-top: 1rem;
       height:100px;
     }
-    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
-      display:none;
-    }
-    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
-      display:inline-block;
+    .contactcard {
+        width: 100px;
+        height: 100px;
     }
   }
