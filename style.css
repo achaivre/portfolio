@@ -32,9 +32,11 @@
     align-items: center;
     padding: 10px 20px;
     background-color: var(--second-color);
+    z-index: 2;
   }
   .logo-text{
     color:white;
+    z-index: 2;
   }
   
   .hamburger-icon{
@@ -259,6 +261,11 @@
 .contactcard p{
     margin: 1em;
     font-size: clamp(10px, 6vw, 14px);
+}
+
+#email p{
+  position: relative;
+  right: 12%;
 }
 
 .contactcard i{
