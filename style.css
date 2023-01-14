@@ -1,16 +1,17 @@
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration:none;
     box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 :root {
     --main-color: #FEFEE3;
     --second-color: #2C6E49;
-    --third-color: #4c956c;
+    --third-color: #F5F3BB;
 }
   
   .hamburger-icon {
@@ -26,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
   }
   .logo-text{
     color:white;
@@ -39,7 +40,7 @@
   
   .hamburger-icon .fa-bars,
   .hamburger-icon .fa-x{
-    color:var(--second-color);
+    color:var(--main-color);
     font-size:1rem;
     cursor:pointer;
   }
@@ -53,7 +54,7 @@
     gap: 1rem;
   }
   .navigation a{
-    color:var(--second-color)
+    color:var(--main-color)
   }
   
   
