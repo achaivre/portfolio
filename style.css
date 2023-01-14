@@ -66,39 +66,6 @@
     font-weight: bold;
   }
   
-  @media screen and (max-width: 600px) {
-    header {
-      display: block;
-    }
-    .navigation {
-      height:0;
-      overflow:hidden;
-      flex-direction: column;
-      align-items: center;
-      transition:all 0.5s ease-in-out;
-    }
-    .logo {
-      display: flex;
-      justify-content: space-between;
-    }
-    .hamburger-icon {
-      display: block;
-    }
-    .fa-x{
-      display:none;
-    }
-    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
-      margin-top: 1rem;
-      height:100px;
-    }
-    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
-      display:none;
-    }
-    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
-      display:inline-block;
-    }
-  }
-  
   
   /* Main Info */
   .container{
@@ -184,15 +151,6 @@
 .container .cardholder .card i{
     color: var(--second-color);
     font-size: 6em;
-}
-
-
-.card:hover{
-    cursor: pointer;
-    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-    background-position: left;
-    background-color: var(--third-color);
 }
 
 .card p{
@@ -305,3 +263,38 @@
     text-decoration: none;
     color: black;
 }
+
+/* mobile changes */
+
+@media screen and (max-width: 600px) {
+    header {
+      display: block;
+    }
+    .navigation {
+      height:0;
+      overflow:hidden;
+      flex-direction: column;
+      align-items: center;
+      transition:all 0.5s ease-in-out;
+    }
+    .logo {
+      display: flex;
+      justify-content: space-between;
+    }
+    .hamburger-icon {
+      display: block;
+    }
+    .fa-x{
+      display:none;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+      margin-top: 1rem;
+      height:100px;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+      display:none;
+    }
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+      display:inline-block;
+    }
+  }
