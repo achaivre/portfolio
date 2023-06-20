@@ -1,0 +1,71 @@
+
+.title {
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    font-size: 8rem;
+    line-height: 100%;
+    
+}
+
+.title h3 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(--color-primary-variant);
+}
+
+
+/* =============== CTA =========== */
+
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 5%;
+    justify-content: left;
+}
+
+/* ============ MEDIA DEVICES (MEDIUM SCREEN) =========== */
+@media (max-width: 1200px) {
+    .title h1 {
+        text-transform: uppercase;
+        font-size: 6rem;
+        line-height: 100%;
+        transition: var(--transition);
+        
+    }
+    
+    .title h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: var(--color-primary-variant);
+        transition: var(--transition);
+    }
+
+}
+
+/* ============ MEDIA DEVICES (MEDIUM SCREEN) =========== */
+@media (max-width: 750px) {
+    .title {
+        padding-top: 20%;
+        padding-left: 5%;
+    }
+
+    .title h1 {
+        text-transform: uppercase;
+        font-size: 4rem;
+        line-height: 100%;
+        transition: var(--transition);
+        
+    }
+    
+    .title h3 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: var(--color-primary-variant);
+        transition: var(--transition);
+    }
+
+}
