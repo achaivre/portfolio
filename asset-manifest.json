@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.8d171d25.css",
-    "main.js": "/portfolio/static/js/main.48a0bc6f.js",
+    "main.js": "/portfolio/static/js/main.270cae9a.js",
     "static/media/goat_project.PNG": "/portfolio/static/media/goat_project.14f96c19c7cccb0b327d.PNG",
     "static/media/horse_racing_sim.png": "/portfolio/static/media/horse_racing_sim.055007bc0f86e2cd3635.png",
     "static/media/listo.jpg": "/portfolio/static/media/listo.c3f4a5d0eac53daa8147.jpg",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.4bd2663e80ea1309b167.pdf",
     "static/media/budget_python.PNG": "/portfolio/static/media/budget_python.f863e296d9657cdc6ac5.PNG",
     "static/media/directory_python.PNG": "/portfolio/static/media/directory_python.e515cae6bfb5291d97d6.PNG",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.c29f134cb5eb0c48b471.pdf",
     "index.html": "/portfolio/index.html",
     "main.8d171d25.css.map": "/portfolio/static/css/main.8d171d25.css.map",
-    "main.48a0bc6f.js.map": "/portfolio/static/js/main.48a0bc6f.js.map"
+    "main.270cae9a.js.map": "/portfolio/static/js/main.270cae9a.js.map"
   },
   "entrypoints": [
     "static/css/main.8d171d25.css",
-    "static/js/main.48a0bc6f.js"
+    "static/js/main.270cae9a.js"
   ]
 }
