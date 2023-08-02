@@ -6,6 +6,7 @@ import IMG2 from '../../assets/budget_python.PNG';
 import IMG3 from '../../assets/goat_project.PNG';
 import IMG4 from '../../assets/listo.jpg';
 import IMG5 from '../../assets/horse_racing_sim.png';
+import IMG6 from '../../assets/articles_api.png';
 
 
 const Projects = () => {
@@ -80,6 +81,19 @@ const Projects = () => {
           </div>
           <div className="project__item-cta">
           <a href="https://github.com/achaivre/horse_racing_simulator" className='btn' target='_blank'>Github</a>
+          </div>
+        </article>
+
+        <article className="projects__item">
+          <div className="project__item-image">
+            <img src={IMG6} alt="" />
+          </div>
+          <h3>Spring Boot API Project: News Article API</h3>
+          <div className="project__content">
+            <p>This project is built using Java in the Spring Boot framework. It is an API that has two relationships of a One to Many relationship with Authors to Articles and a Many to Many relationship with Articles and Tags. It has full CRUD capabilities from the API.</p>
+          </div>
+          <div className="project__item-cta">
+          <a href="https://github.com/achaivre/articlesapi" className='btn' target='_blank'>Github</a>
           </div>
         </article>
 
